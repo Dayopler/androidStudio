@@ -23,11 +23,13 @@
             android:orientation="horizontal"
             android:gravity="center">
 
-            <Button android:id="@+id/button1"
+            <Button
+                android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="changeLabelColor"
                 android:text="Button 1 : change label color"
-                android:onClick="changeLabelColor"/>
+                tools:ignore="DuplicateIds,OnClick"/>
 
             <TextView android:id="@+id/label1"
                 android:layout_width="wrap_content"
@@ -38,7 +40,7 @@
 
         </LinearLayout>
 
-        <Button android:id="@+id/button1"
+        <Button android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button 2 : erreur"
@@ -47,7 +49,8 @@
         <Button android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button3 : change activity"/>
+            android:text="Button3 : change activity"
+            android:onClick="goToActivity2"/>
 
     </LinearLayout>
 

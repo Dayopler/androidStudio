@@ -22,8 +22,15 @@ public class MainActivity extends AppCompatActivity {
     public void goToActivity2(View view){
 
         Log.e("DEVE0304", "MainActivity.goToActivity2()");
+        Intent intent = new Intent(MainActivity.this, Activity2.class);
+        String name = "Yanis GATEBLE";
+        intent.putExtra("nom : ", name);
+        startActivity(intent);
     };
 
+    public void changeLabelColor(View view){
+        findViewById(R.id.label1).setBackgroundColor(0xFF106524);
+    }
 
     public void doSomePrinting(View view) {
 
@@ -31,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         String [] list_of_languages = {"Java", "Python", "Php", "Ruby on Rail", "C++"};
 
-        for (int idx = 0 ; idx <= list_of_languages.length ; idx ++)
+        for (int idx = 0 ; idx < list_of_languages.length ; idx ++)
             Log.e("DEVE0304", "" + idx + " : " + list_of_languages[idx]);
 
     }
